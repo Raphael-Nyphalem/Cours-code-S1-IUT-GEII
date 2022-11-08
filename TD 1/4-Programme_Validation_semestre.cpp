@@ -47,8 +47,7 @@ int main()
     else{
         cout << "redoublement";
     }
-    
-    
+    cout << '\n';
     
 
 
