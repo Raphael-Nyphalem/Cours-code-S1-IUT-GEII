@@ -1,0 +1,42 @@
+Programme Validation semestre
+    Constantes
+        reel: MOYENNE_MATIERE_POUR_PASSER = 8
+        reel: MOYENNE_SEMESTRE_POUR_PASSER = 10
+    Declaration des variable
+        reels: moyenneUE1, moyenneUE2, moyenneUE3
+        reel: moyenneSemestre
+        bools: critere1, critere2
+    Actions
+        moyenneUE1 = lireClavier()
+        moyenneUE2 = lireClavier()
+        moyenneUE3 = lireClavier()
+
+        moyenneSemestre = (moyenneUE1 + moyenneUE2 + moyenneUE3) /3
+
+        //critere 1 ?
+        critere1 <= (moyenneSemestre >= MOYENNE_SEMESTRE_POUR_PASSER)
+
+        
+        //critere 2 ?
+        SI moyenneUE1 < MOYENNE_MATIERE_POUR_PASSER ALORS
+            critere2 = FAUX
+        SINONSI moyenneUE2 < MOYENNE_MATIERE_POUR_PASSER ALORS
+            critere2 = FAUX
+        SINONSI moyenneUE3 < MOYENNE_MATIERE_POUR_PASSER ALORS
+            critere2 = FAUX
+        SINON
+            critere2 = VRAI
+        Fin SI
+
+        //decision :
+        SI critere1 == VRAI ALORS
+            SI critere2 == VRAIS ALORS
+                ecrireEcrant("semestre valider")
+            SINON
+                ecrireEcrant("decision du jury")
+            Fin SI
+        SINON
+            ecrireEcrant("semestre non valider") 
+        Fin SI
+    Fin Actions
+Fin Programme

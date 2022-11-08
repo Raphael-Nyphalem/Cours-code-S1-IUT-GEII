@@ -1,0 +1,16 @@
+Programme calculMoy
+    Declaration variable locales
+        reels: v1, v2, v3
+        reels: somme,, moyenne
+    Actions
+        ecrireEcrant('Donne la valeur 1: ')
+        v1 = lireClavier()
+        ecrireEcrant('Donne la valeur 2: ')
+        v2 = lireClavier()
+        ecrireEcrant('Donne la valeur 3: ')
+        v3 = lireClavier()
+        somme = v1 + v2 + v3
+        moyenne = somme / 3
+        ecrireEcrant(moyenne)
+    Fin Actions
+Fin Programme
