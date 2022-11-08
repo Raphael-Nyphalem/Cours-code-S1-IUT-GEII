@@ -8,9 +8,12 @@ float moyenneUE1, moyenneUE2, moyenneUE3,moyenneSemestre;
 bool critere1, critere2;
 
 int main()
-{
+{   
+    cout << "moyenneUE1: ";
     cin >> moyenneUE1;
+    cout << "moyenneUE2: ";
     cin >> moyenneUE2;
+    cout << "moyenneUE3: ";
     cin >> moyenneUE3;
 
     moyenneSemestre = (moyenneUE1 + moyenneUE2 + moyenneUE3)/3;
@@ -38,18 +41,13 @@ int main()
     {
         if (critere2)
         {
-            cout << "semestre valider";
+            cout << "\nsemestre valider \n";
         }
         else{
-            cout << "decision du jury";
+            cout << "\ndecision du jury \n";
         }   
     }
     else{
-        cout << "redoublement";
+        cout << "\nredoublement \n";
     }
-    cout << '\n';
-    
-
-
-
 }
