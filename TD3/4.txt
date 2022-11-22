@@ -1,0 +1,23 @@
+Programme Hello_World
+    Declaration variable locales
+        Entier: x,n,i,res
+    Action
+        ecrireEcrant: "quelle est la valeur de x: "
+        x <-- lireClavier()
+        ecrireEcrant:"quelle est la valeur de n: "
+        n <-- lireClavier()
+        Si (n<0) Alors
+            ecrireEcrant: "Ce Programme ne permet pas ce calcul"
+        Sinon
+            Si(n==0) Alors
+                ecrireEcrant 1
+            Sinon
+                res <-- 1
+                POUR (i = 1) QUAND(i<= n) AVEC (i= i+1)
+                    res = res*x
+                FIN_POUR
+                ecrireEcrant res
+            FIN_SI
+        FIN_SI
+    FIN_ACTION
+FIN_PROGRAMME 

@@ -1,0 +1,11 @@
+Programme Bonjour:
+    Declaration des variable locales
+        charactère: N
+    Action
+        Répété
+            ecrireEcrant("bonjour le mondes")
+            ecrireEcrant("tapé N pour arrêter")
+            N <-- lireClavier()
+        TANT-QUE( N !="N")
+    Fin Action
+Fin Programme

@@ -1,0 +1,11 @@
+Programme Hello_World
+    Declaration variable locales
+        Entier: nbFois, i
+    Action
+        ecrireEcrant("Combien de fois a afficher")
+        nbFois = lireClavier()
+        Pour( i <-- 1) QUAND(i <= nbFois ) AVEC ( i = i+1 )
+            ecrireEcrant("Hello World! ")
+        fin Pour
+    fin Action
+fin Programme
