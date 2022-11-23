@@ -1,0 +1,32 @@
+PROGRAMME Repeter le choix de la couleur d'un pixel:
+    Déclaration des variables
+        entier: x,y
+        entier: R,G,B
+        booleen: testinterval, testtouta0
+    
+    Action
+        x <-- 0
+        y <-- 0
+        Repeter
+            ecrireEcrant pour arreter metter 0 a toute les couleurs
+
+            ecrireEcrant Choisez la quantier de rouge (entre O et 255)
+            R <-- lireClavier()
+
+            ecrireEcrant Choisez la quantier de vert (entre O et 255)
+            V <-- lireClavier()
+
+            ecrireEcrant Choisez la quantier de bleu (entre O et 255)
+            B <-- lireClavier()
+            
+            testtouta0 = R !=0 ou B!= 0 ou G!=0
+            testinterval = (R<0 ou R>255) ou (B<0 ou B>255) ou(G<0 ou G>255)
+
+            SI testinterval ALORS
+                ecrireEcrant Il y a eu une erreur de saisie sur l'une des valeurs
+            SINON
+                bool senseSetRGBpixel(x,y,R,G,B)
+            FIN-SI
+        TANT_QUE(testinterval ou testtouta0)
+    FIN_ACTION
+FIN_PROGRAMME

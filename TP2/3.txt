@@ -1,0 +1,20 @@
+PROGRAMME Repeter le choix de la couleur d'un pixel:
+    Déclaration des variables
+        entier: x,y
+        entier sur 8bits: R,G,B
+    
+    Action
+        x <-- 0
+        y <-- 0
+        Repeter
+            ecrireEcrant pour arreter metter 0 a toute les couleurs
+            ecrireEcrant Choisez la quantier de rouge (entre O et 255)
+            R <-- lireClavier()
+            ecrireEcrant Choisez la quantier de vert (entre O et 255)
+            V <-- lireClavier()
+            ecrireEcrant Choisez la quantier de bleu (entre O et 255)
+            B <-- lireClavier()
+            bool senseSetRGBpixel(x,y,R,G,B)
+        TANT_QUE(R !=0 ou B!= 0 ou G!=0)
+    FIN_ACTION
+FIN_PROGRAMME

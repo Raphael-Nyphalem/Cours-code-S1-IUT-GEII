@@ -1,0 +1,25 @@
+PROGRAMME Choix de la couleur
+    Déclaration des variables
+        entier: choix,x,y
+        entier sur 8bits: R,G,B
+    
+    Action
+        x <-- 0
+        y <-- 0
+        ecrireEcrant: Choisez votre couleur 
+                        '1' pour rouge
+                        '2' pour vert
+                        '3' pour bleu
+        choix <-- lireClavier()
+
+        SUIVANT(choix)
+            cas 1:
+                R,G,B = 255,0,0
+            cas 2:
+                R,G,B = 0,255,0
+            cas 3:
+                R,G,B = 0,0,255
+        FIN_SUIVANT
+        bool senseSetRGBpixel(x,y,R,G,B)
+    FIN_ACTION
+FIN_PROGRAMME
