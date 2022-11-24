@@ -53,7 +53,7 @@ void ex2()
         break;
     }
     //senseSetRGBpixel(x,y,R,G,B);
-    }while (choix !=4)
+    }while (choix !=4);
     
 
 }
@@ -62,14 +62,17 @@ void ex3()
 {
     int x=0;
     int y=0;
-    int R,G,B
-    cout << "Pour arreter metter 0 a toute les couleurs\n"
-        << "Choisez la quantier de rouge (entre O et 255)\n";
-    cin >> R;
-    cout << "Choisez la quantier de vert (entre O et 255)\n";
-    cin >> G;
-    cout << "Choisez la quantier de bleu (entre O et 255)\n":
-    cin >>B;
+    int R,G,B;
+    do{
+        std::cout << "Pour arreter metter 0 a toute les couleurs\n"
+            << "Choisez la quantier de rouge (entre O et 255)\n";
+        std::cin >> R;
+        std::cout << "Choisez la quantier de vert (entre O et 255)\n";
+        std::cin >> G;
+        std::cout << "Choisez la quantier de bleu (entre O et 255)\n":
+        std::cin >>B;
+        //senseSetRGBpixel(x,y,R,G,B);
+    }while(R!=0 or G!=0 or B!=0)
 }
 
 int main(int argc, char const *argv[])
