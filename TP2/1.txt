@@ -1,7 +1,7 @@
 PROGRAMME Choix de la couleur
     Déclaration des variables
         entier: choix,x,y
-        entier sur 8bits: R,G,B
+        entier: R,G,B
     
     Action
         x <-- 0
