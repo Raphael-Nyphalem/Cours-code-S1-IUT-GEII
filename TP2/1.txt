@@ -6,7 +6,7 @@ PROGRAMME Choix de la couleur
     Action
         x <-- 0
         y <-- 0
-        ecrireEcrant: Choisez votre couleur 
+        ecrireEcrant: Choisissez votre couleur 
                         '1' pour rouge
                         '2' pour vert
                         '3' pour bleu
