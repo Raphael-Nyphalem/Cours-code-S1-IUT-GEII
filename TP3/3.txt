@@ -1,0 +1,10 @@
+PROGRAMME Barre_de_progression
+    Déclaration des variables locales
+        entier: x
+    ACTION
+        Pour x=0 QUAND x<=7 POUR x= x+1
+            senseSetRGBpixel(x,0,255,255,255)
+            sleep_for(milliseconds(500))
+        FIN_POUR
+    FIN_ACTION
+FIN_PROGRAMME

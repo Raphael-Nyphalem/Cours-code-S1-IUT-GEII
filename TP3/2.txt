@@ -1,0 +1,19 @@
+PROGRAMME Chenillard
+    Déclaration des variables locales
+        entier: x,y
+        caractère: var
+    ACTION
+        x <-- 0
+        y <-- 0
+        répété
+            senseSetRGBpixel(x,y,255,255,255)
+            ecrireEcrant "continuer ? 'O' ou 'N'"
+            var <-- lireClavier
+            SI var == "O" ALORS
+                senseSetRGBpixel(x,y,255,255,0)
+                x <-- 1
+                senseSetRGBpixel(x,y,255,255,255)
+            FIN_SI
+        TQ(var!='N')
+    FIN_ACTION
+FIN_PROGRAMME
