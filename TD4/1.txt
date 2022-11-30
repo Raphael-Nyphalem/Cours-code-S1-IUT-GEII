@@ -1,0 +1,35 @@
+PROGRAMME Calcul_min_max_moy
+    Décalration des variables local
+        Entier: nb
+        entier: var,min,max, nb_val
+        réel : moy
+    ACTION
+        nb_val <-- 0
+        nb <-- 0
+        min <-- infinit
+        max  <-- 0
+        répété
+            ecrireEcrant "donnez une valeur de la serie (ecire un nombre negatif pour stop la saisi)"
+            var <-- lireClavier()
+            SI var >= 0 ALORS 
+                nb = nb + var
+                nb_val <-- nb_val +1
+
+                SI var > max ALORS
+                    max <-- var
+                FIN_SI
+                SI var < min ALORS
+                    min <-- var
+                FIN_SI
+            FIN_SI
+        TANT_QUE(var >=0 )
+        SI min != infinit ALORS
+            moy <-- nb/(nb_val*1.0)
+            ecrireEcrant "min: ",min," max: ",max," moyenne: ",moy
+        SINON
+            ecrireEcrant "vous n'avais pas entre de valeur valide"
+    FIN_ACTION
+FIN_PROGRAMME
+
+            
+

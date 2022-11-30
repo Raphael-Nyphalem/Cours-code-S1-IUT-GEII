@@ -1,0 +1,25 @@
+PROGRAMME affichage_table_multiplication
+    Décalration des variables locales
+        Entier: nb_lu, i,a, result
+    ACTION
+
+    ecrireEcrant("quelle table")
+    nb_lu <-- lireClavier()
+    SI nb_lu <10 ALORS
+        POUR(i=1)QUAND(i<=10)AVEC(i=i+1)
+            POUR(a=1)QUAND(a<=nb_lu)AVEC(a=a+1)
+                result = i*a
+                SI result >=10 and i !=10 ALORS
+                    ecrireEcrant a,"x ",i,"=  ",result," | "
+                SINON 
+                    SI result < 10 and i!=10 ALORS
+                        ecrireEcrant a,"x ",i,"=   ",result," | "
+                    SINON
+                        ecrireEcrant a,"x",i,"=  ",result," | "
+                    FIN_SI
+                FIN_SI
+            FIN_POUR
+            ecrireEcrant finligne()
+        FIN_POUR
+    FIN_SI
+FIN_PROGRAMME
