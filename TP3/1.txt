@@ -1,17 +1,13 @@
 PROGRAMME Allumer_les_pixels
     Déclaration des variables locales
-        entier: x,y
         caractère: var
     ACTION
-        x <-- 0
-        y <-- 0
         répété
-            senseSetRGBpixel(x,y,255,255,255)
+            senseSetRGBpixel(0,0,255,255,255)
             ecrireEcrant "continuer ? 'O' ou 'N'"
             var <-- lireClavier
             SI var == "O" ALORS
-                x <-- 1
-                senseSetRGBpixel(x,y,255,255,255)
+                senseSetRGBpixel(1,0,255,255,255)
             FIN_SI
         TQ(var!='N')
     FIN_ACTION
