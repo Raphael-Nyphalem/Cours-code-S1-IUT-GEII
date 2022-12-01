@@ -78,7 +78,19 @@ void Barre_de_progression_avec_y()
     
 }
 
-
+void ex5()
+{
+    int x,y,b;
+    for (b=0; b<=14; b++)
+    {
+       for (x=0 ; x<=7; x++)
+       {
+            y= -x+b;
+            //senseSetRGBpixel(x,y,255,0,0);
+       }
+       std::this_thread::sleep_for(std::chrono::milliseconds(500) ); 
+    }
+}
 
 
 int main(int argc, char const *argv[])

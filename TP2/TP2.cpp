@@ -69,10 +69,19 @@ void ex3()
         std::cin >> R;
         std::cout << "Choisez la quantier de vert (entre O et 255)\n";
         std::cin >> G;
-        std::cout << "Choisez la quantier de bleu (entre O et 255)\n":
+        std::cout << "Choisez la quantier de bleu (entre O et 255)\n";
         std::cin >>B;
         //senseSetRGBpixel(x,y,R,G,B);
-    }while(R!=0 or G!=0 or B!=0)
+    }while(R!=0 or G!=0 or B!=0);
+}
+void ex4()
+{
+
+}
+
+void ex5()
+{
+    
 }
 
 int main(int argc, char const *argv[])
