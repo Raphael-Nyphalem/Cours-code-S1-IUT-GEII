@@ -95,7 +95,31 @@ void ex5()
 
 int main(int argc, char const *argv[])
 {
-    Allumer_les_pixels();
-    Chenillard();
+    int a;
+
+    std:: cout << "quelle exercice : ";
+    std::cin >> a;
+
+    switch (a)
+    {
+    case 1:
+        Allumer_les_pixels();
+        break;
+    case 2:
+        Chenillard();
+        break;
+    case 3:
+        Barre_de_progression();
+        break;
+    case 4:
+        Barre_de_progression_avec_y();
+        break;
+    case 5:
+        ex5();
+        break;
+    
+    default:
+        break;
+    }
     return 0;
 }
