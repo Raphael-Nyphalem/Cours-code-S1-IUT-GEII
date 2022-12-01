@@ -1,19 +1,18 @@
 PROGRAMME Chenillard
     Déclaration des variables locales
-        entier: x,y
+        entier: x
         caractère: var
     ACTION
         x <-- 0
-        y <-- 0
+        senseSetRGBpixel(x,y,255,255,255)
         répété
-            senseSetRGBpixel(x,y,255,255,255)
             ecrireEcrant "continuer ? 'O' ou 'N'"
             var <-- lireClavier
             SI var == "O" ALORS
                 senseSetRGBpixel(x,y,255,255,0)
-                x <-- 1
+                x <-- x+1
                 senseSetRGBpixel(x,y,255,255,255)
             FIN_SI
-        TQ(var!='N')
+        TQ(var!='N' and x <7 )
     FIN_ACTION
 FIN_PROGRAMME

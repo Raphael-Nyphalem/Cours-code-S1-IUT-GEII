@@ -2,8 +2,8 @@ PROGRAMME Allumer_les_pixels
     Déclaration des variables locales
         caractère: var
     ACTION
+        senseSetRGBpixel(0,0,255,255,255)
         répété
-            senseSetRGBpixel(0,0,255,255,255)
             ecrireEcrant "continuer ? 'O' ou 'N'"
             var <-- lireClavier
             SI var == "O" ALORS
