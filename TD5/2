@@ -1,0 +1,36 @@
+// dans les paramètres formel si il n'y a rien c'est qu'il sont souligné si il sont entre [] c'est qu'il sont encadré 
+FONCTION Reel: calculerPuissance(reel: x , entier: n)
+    Entier: i
+    Reel: res
+
+    res <-- 1
+    POUR(i=0)QUAND(i<n)AVEC(i=i+1)
+        res=res*x
+    FIN_POUR
+    
+    RETOURNE res
+FIN_FONCTION
+
+FONCTION Entier: saisieEntierPos()
+    Entier: n
+    REPETE
+        ecrireEcrant "donner en entier naturel n: "
+        n <-- lireClavier()
+    TANT_QUE(n<0)
+    RETOURNE n
+FIN_FONCTION
+
+
+PROGRAMME
+    Décalration des variables
+        reel: x,res
+        Entier: n
+    ACTION
+        ecrireEcrant "donné un réel x: "
+        x <-- lireClavier()
+
+        n <-- saisieEntierPos()
+        res <-- calculerPuissance(x,n)
+        ecrireEcrant "resultat de ",x," puissance ",n," est ",res
+    FIN_ACTION
+FIN_PROGRAMME
