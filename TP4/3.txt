@@ -1,9 +1,9 @@
 PROGRAMME
     Déclaration des variables
         Entier: x,y
-        Entier: r,g,b
+        Entier nature sur 8 bit: r,g,b
     ACTION
-        r,g,b <-- 3,127,255
+        r,g,b <-- 31,127,255
         POUR(x=0)QUAND(x<=7)AVEC(x=x+1)
             POUR(y=0)QUAND(y<=7)AVEC(y=y+1)
                 senseSetRGBpixel(x,y,r,g,b)
