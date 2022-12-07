@@ -1,7 +1,7 @@
 PROGRAMME
     Déclaration des variables
         Entier: x,y
-        Entier: r,g,b,save
+        Entier nature sur 8 bit: r,g,b,save
     ACTION
         r,g,b <-- 0,255,125
         POUR(y=7)QUAND(y>=0)AVEC(y=y-1)

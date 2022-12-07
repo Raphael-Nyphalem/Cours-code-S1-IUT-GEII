@@ -44,7 +44,7 @@ void ex3()
 void ex4()
 {
     int x,y;
-    unsigned int r,g,b,save_r;
+    unsigned short r,g,b,save_r;
     r,g,b = 0,255,127;
 
     for (y = 7; y >=0; y--)
@@ -63,16 +63,16 @@ void ex4()
 void ex5()
 {
     int x,y,i;
-    unsigned int r,g,b;
+    unsigned short r,g,b;
     r,g,b = 255,0,0;
 
     for (i = 0; i <=7; i++)
     {
-        for (x = 0; x <= 7; x++)
+        for (x = i; x <= 7; x++)
         {
             //senseSetRGBpixel(x,i,r,g,b);
         }
-        for (y = 0; y <=7; y++)
+        for (y = i; y <=7; y++)
         {
             //senseSetRGBpixel(x,y,r,g,b);
         }
@@ -101,6 +101,50 @@ void ex5()
                 r,g,b=70,70,255;
                 break;
             
+            default:
+                break;
+        }
+    }
+}
+void ex6()
+{
+    int x,y,i;
+    unsigned short r,g,b;
+    r,g,b = 255,0,0;
+
+    for (i = 0; i <=7; i++)
+    {
+        for (x = i; x <= 7-i; x++)
+        {
+            //senseSetRGBpixel(x,i,r,g,b);
+        }
+        for (y = i; y <=7-i; y++)
+        {
+            //senseSetRGBpixel(i,y,r,g,b);
+        }
+        for (x = i; x <= 7-i; x++)
+        {
+            //senseSetRGBpixel(x,7-i,r,g,b);
+        }
+        for (y = i; y <=7-i; y++)
+        {
+            //senseSetRGBpixel(7-i,y,r,g,b);
+        }
+        //sleep_for(milliseconds(300));
+        switch (i+1)
+        {
+            case 1:
+                r,g,b=0,0,255;
+                break;
+            case 2:
+                r,g,b=0,255,0;
+                break;
+            case 3:
+                r,g,b=255,0,0;
+                break;
+            case 4:
+                r,g,b=50,50,200;
+                break; 
             default:
                 break;
         }
