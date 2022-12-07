@@ -1,0 +1,35 @@
+PROGRAMME
+    Déclaration des variables
+        Entier: x,y
+        Entier: r,g,b,save
+    ACTION
+        r,g,b <-- 255,0,0
+        POUR(i=0)QUAND(i<=7)AVEC(i=i+1)
+            POUR(x=i)QUAND(x<=7)AVEC(x=x+1)
+                senseSetRGBpixel(x,i,r,g,b)
+            FIN_POUR
+            POUR(y=i)QUAND(y<=7)AVEC(y=y+1)
+            
+                senseSetRGBpixel(i,y,r,g,b)
+            FIN_POUR
+
+            sleep_for(milliseconds(200))
+
+            SUIVANT i+1
+                cas 1
+                    r,g,b = 0,0,255
+                cas 2
+                    r,g,b = 0,255,0
+                cas 3
+                    r,g,b = 255,255,0
+                cas 4
+                    r,g,b = 50,50,200
+                cas 5
+                    r,g,b = 50,200,50
+                cas 6
+                    r,g,b = 255,0,255
+                cas 7
+                    r,g,b = 70,70,255
+        FIN_POUR
+    FIN_ACTION
+FIN_PROGRAMME

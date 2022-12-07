@@ -1,28 +1,8 @@
 #include <iostream>
 
-
-float calculerPuissance(float inX,int inN)
-{
-    float res =1;
-    for (int i = 0; i < inN; i++)
-    {
-        res = res*inX;
-    }
-    return res;
-    
-}
-
-int saisieEntierPos()
-{
-    int n;
-    do
-    {
-        std::cout <<"donner en entier naturel n: ";
-        std::cin >> n;
-    } while (n<0);
-    return n;
-    
-}
+//permet de mettre les fonction a la fin du programme
+float calculerPuissance(float inX,int inN);
+int saisieEntierPos();
 
 int main(int argc, char const *argv[])
 {
@@ -40,4 +20,27 @@ int main(int argc, char const *argv[])
                 <<std::endl;
     
     return 0;
+}
+
+int saisieEntierPos()
+{
+    int n;
+    do
+    {
+        std::cout <<"donner en entier naturel n: ";
+        std::cin >> n;
+    } while (n<0);
+    return n;
+    
+}
+
+float calculerPuissance(float inX,int inN)
+{
+    float res =1;
+    for (int i = 0; i < inN; i++)
+    {
+        res = res*inX;
+    }
+    return res;
+    
 }

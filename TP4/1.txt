@@ -1,0 +1,12 @@
+PROGRAMME
+    Déclaration des variables
+        Entier: x,y
+    ACTION
+        POUR(x=0)QUAND(x<=7)AVEC(x=x+1)
+            POUR(y=0)QUAND(y<=7)AVEC(y=y+1)
+                senseSetRGBpixel(x,y,0,255,0)
+                sleep_for(milliseconds(300))
+            FIN_POUR
+        FIN_POUR
+    FIN_ACTION
+FIN_PROGRAMME
