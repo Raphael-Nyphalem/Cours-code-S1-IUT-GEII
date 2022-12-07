@@ -41,6 +41,7 @@ void ex3()
         b-=32;
     }
 }
+
 void ex4()
 {
     int x,y;
@@ -60,6 +61,32 @@ void ex4()
         b=save_r;
     }
 }
+
+void ex4_1()
+{
+    int x,y;
+    unsigned short r,g,b;
+    
+
+    for (y = 7; y >=0; y--)
+    {
+        if (y%2==0)
+        {
+            r,g,b = 255,127,0;
+        }
+        else
+        {
+            r,g,b = 0,255,127;
+        }
+        
+        for (x = 0; x <= 7; x++)
+        {
+            //senseSetRGBpixel(x,y,r,g,b);
+        }
+        //sleep_for(milliseconds(300));
+    }
+}
+
 void ex5()
 {
     int x,y,i;
