@@ -1,0 +1,60 @@
+FONTION Reel: formule(Reel: a,Entier: n)
+
+    Entier: i
+    Reel: res=0
+    POUR(i = 1)QUAND(i <= n)SUIVANT (i=i+1)
+        res = res + addition(puissance(a,i),inverse(factoriel(i)))
+    FIN_POUR
+    
+    RETOURNER res
+FIN_FONTION
+    
+
+FONTION Entier: factoriel(Entier: n)
+
+    Entier: res= 1
+    Entier: i
+    POUR(i = 1)QUAND(i <= n)SUIVANT (i=i+1)
+        res = res * i
+    FIN_POUR
+    
+    
+    RETOURNER res
+FIN_FONTION
+
+FONTION Reel: inverse(Reel: n)
+
+    Reel: res=0
+    SI (n!=0) ALORS
+    
+        res = 1/n
+    SINON
+
+        Ecrireecrat: "error inverse de 0 "
+
+    RETOURNER res
+
+FONTION Reel: addition(Reel: nb1,Reel: nb2)
+
+    Reel: res
+    res = nb1 +nb2
+    RETOURNER res
+FIN_FONTION
+
+FONTION Reel: puissance(Reel: nb,Entier: p)
+
+    Reel: res=1.0
+    Entier: i
+    POUR(i = 0)QUAND(i < p)SUIVANT(i=i+1)    
+        res = res * nb 
+    FIN_POUR
+    RETOURNER res
+FIN_FONTION
+    
+PROGRAMME
+    Reel: a,res
+    Entier: n
+    a,n <-- lireClavier()
+    res = formule(a,n)
+    Ecrireecrat(res)
+FIN_PROGRAMME

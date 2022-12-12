@@ -1,0 +1,26 @@
+FONCTION VIDE: decomposer(Entier nb3,Entier [unit],[diz], [cent])
+    unit = nb3%10
+    diz = ((nb3%100)/10)
+    cent = nb3/100
+FIN_FONTION
+
+FONCTION Entier composer(Entier cent,Entier diz,Entier unit)
+    Entier res = cent * 100+diz*10+unit;
+    RETOURNER(res);
+FIN_FONTION
+
+PROGRAMME
+    Entier: abc= 367;
+    Entier: cent;
+    Entier: diz;
+    Entier: unit;
+    decomposer(367,&unit,&diz,&cent);
+
+    Entier: N1 = composer(unit,cent,diz);
+    Entier: N2 = composer(unit,diz,cent);
+    Entier: N3 = composer(diz,unit,cent);
+
+    Ecrireecrat( "N1: ", N1 )
+    Ecrireecrat( "N2: ", N2 )
+    Ecrireecrat( "N3: ", N3 )
+FIN_PROGRAMME
