@@ -1,0 +1,21 @@
+FONCTION VIDE: allumerColonneVert(entier: uneColonne)
+    déclaration des variables
+        Entier: y
+    ACTION
+        POUR(y=0)QUAND(y<=7)SUIVANT(y=y+1)
+            senseSetRGBpixel(uneColonne,y,0, 255, 0)
+        FIN_POUR
+    FIN_ACTION
+FIN_FONTION
+
+
+PROGRAMME
+    déclaration des variables
+        Entier: laColonne
+    ACTION
+        REPETER
+            laColonne <-- lireClavier()
+        TQ(laColonne<0 ou laColonne>7)
+        allumerColonneVert(laColonne)
+    FIN_ACTION
+FIN_PROGRAMME

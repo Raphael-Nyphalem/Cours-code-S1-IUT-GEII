@@ -1,0 +1,32 @@
+FONCTION VIDE: allumerColonneVert(entier: uneColonne,uneCouleur)
+    déclaration des variables
+        Entier: y,r,g,b
+    ACTION
+        SUIVANT uneCouleur
+            cas 1
+                r,g,b = 255,0,0
+            cas 2
+                r,g,b = 0,255,0
+            cas 3
+                 r,g,b = 0,0,255
+            defaut
+                r,g,b = 255,255,255
+            
+        POUR(y=0)QUAND(y<=7)SUIVANT(y=y+1)
+            senseSetRGBpixel(uneColonne,y,r, g, b)
+        FIN_POUR
+    FIN_ACTION
+FIN_FONTION
+
+
+PROGRAMME
+    déclaration des variables
+        Entier: laColonne,laCouleur
+    ACTION
+        REPETER
+            laColonne <-- lireClavier()
+        TQ(laColonne<0 ou laColonne>7)
+        laCouleur <-- lireClavier()
+        allumerColonneVert(laColonne,laCouleur)
+    FIN_ACTION
+FIN_PROGRAMME
