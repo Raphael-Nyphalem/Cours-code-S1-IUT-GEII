@@ -1,0 +1,54 @@
+
+FONCTION VIDE: choixCouleur(entier: uneCouleur,[r],[g],[b])
+    déclaration des variables
+        Entier: r,g,b
+    ACTION
+        r,g,b = 255,uneCouleur*255/3,uneCouleur*255/3
+    FIN_ACTION
+FIN_FONTION
+
+FONCTION VIDE allumerColonneCouleur(Entier: unX1,unY1,unNbPixels,uneCouleur1)
+    declaration des variables
+        Entier r,g,b
+        Entier: y
+
+    ACTION
+        choixCouleur(uneCouleur1,r,g,b)
+        POUR(y <-- unY1)QUAND(y<(unY1+unNbPixels))SUIVANT(y <-- y + 1)
+            enseSetRGBpixel(unX1,y,r, g, b)
+        FIN_POUR
+    FIN_ACTION
+FIN_FONTION
+
+FONCTION VIDE allumerLigneCouleur(Entier: unX1,unY1,unNbPixels,uneCouleur1)
+    declaration des variables
+        Entier r,g,b
+        Entier: x
+
+    ACTION
+        choixCouleur(uneCouleur1,r,g,b)
+        POUR(x <-- unX1)QUAND(x<(unX1+unNbPixels))SUIVANT(x <-- x + 1)
+            enseSetRGBpixel(x,unY1,r, g, b)
+        FIN_POUR
+    FIN_ACTION
+FIN_FONTION
+
+FONCTION VIDE allumerCarreCouleurRVB()
+    declaration variables local
+        Entier: x,y,i
+    
+    POUR(i=0)QUAND(i<4)SUIVANT(i <-- i)
+        allumerColonneCouleur(i,i,(8-2*i),i)
+        allumerLigneCouleur(i,i,(8-2*i),i)
+
+        allumerColonneCouleur(7-i,i,(8-2*i),i)
+        allumerLigneCouleur(i,7-i,(8-2*i),i)
+    FIN_POUR
+FIN_FONTION
+
+PROGRAMME Carré_en_couleur
+
+    ACTION
+        allumerCarreCouleurRVB()
+    FIN_ACTION
+FIN_PROGRAMME

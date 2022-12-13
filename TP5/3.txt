@@ -1,4 +1,4 @@
-FONCTION VIDE: allumerColonneVert(entier: uneColonne,uneCouleur)
+FONCTION VIDE: allumerColonneLED(entier: uneColonne,uneCouleur)
     déclaration des variables
         Entier: y,r,g,b
     ACTION
@@ -28,7 +28,7 @@ FIN_FONTION
 FONCTION Entier: saisieNumCouleur()
     REPETER
         laCouleur <-- lireClavier()
-    TQ(laCouleur<-1 ou laCouleur>3)
+    TQ(laCouleur<=1 ou laCouleur>3)
     RENVOYER laCouleur
 FIN_FONTION
 
@@ -39,6 +39,6 @@ PROGRAMME
         
         laColonne <-- saisieNumColonne()
         laCouleur <-- saisieNumCouleur()
-        allumerColonneVert(laColonne,laCouleur)
+        allumerColonneLED(laColonne,laCouleur)
     FIN_ACTION
 FIN_PROGRAMME

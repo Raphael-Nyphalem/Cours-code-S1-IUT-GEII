@@ -1,4 +1,4 @@
-FONCTION VIDE: allumerColonneVert(entier: uneColonne,uneCouleur)
+FONCTION VIDE: allumerColonneCouleur(entier: uneColonne,uneCouleur)
     déclaration des variables
         Entier: y,r,g,b
     ACTION
@@ -11,7 +11,7 @@ FONCTION VIDE: allumerColonneVert(entier: uneColonne,uneCouleur)
                  r,g,b = 0,0,255
             defaut
                 r,g,b = 255,255,255
-            
+        FIN_SUIVANT
         POUR(y=0)QUAND(y<=7)SUIVANT(y=y+1)
             senseSetRGBpixel(uneColonne,y,r, g, b)
         FIN_POUR
@@ -27,6 +27,6 @@ PROGRAMME
             laColonne <-- lireClavier()
         TQ(laColonne<0 ou laColonne>7)
         laCouleur <-- lireClavier()
-        allumerColonneVert(laColonne,laCouleur)
+        allumerColonneCouleur(laColonne,laCouleur)
     FIN_ACTION
 FIN_PROGRAMME
