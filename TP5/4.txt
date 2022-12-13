@@ -4,13 +4,13 @@ FONCTION VIDE: choixCouleur(entier: uneCouleur,[r],[g],[b])
         Entier: r,g,b
     ACTION
         SUIVANT uneCouleur
-            cas 1
+            cas 0
                 r,g,b = 255,0,0
-            cas 2
+            cas 1
                 r,g,b = 0,255,0
-            cas 3
+            cas 2
                  r,g,b = 0,0,255
-            cas 4
+            cas 3
                 r,g,b = 255,0,0
     FIN_ACTION
 FIN_FONTION
@@ -46,11 +46,11 @@ PROGRAMME Carré_en_couleur
         Entier: x,y,i
     ACTION
         POUR(i=0)QUAND(i<4)SUIVANT(i <-- i +1)
-            allumerColonneCouleur(i,i,(8-2*i),i+1)
-            allumerLigneCouleur(i,i,(8-2*i),i+1)
+            allumerColonneCouleur(i,i,(8-2*i),i)
+            allumerLigneCouleur(i,i,(8-2*i),i)
 
-            allumerColonneCouleur(7-i,i,(8-2*i),i+1)
-            allumerLigneCouleur(i,7-i,(8-2*i),i+1)
+            allumerColonneCouleur(7-i,i,(8-2*i),i)
+            allumerLigneCouleur(i,7-i,(8-2*i),i)
         FIN_POUR
     FIN_ACTION
 FIN_PROGRAMME
