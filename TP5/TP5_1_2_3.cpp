@@ -12,7 +12,7 @@ void allumerColonneVert (int uneColonne)
 
 void allumerColonneCouleur(int uneColonne,int uneCouleur)
 {
-    int y,r,g,b;
+    int r,g,b;
     switch (uneCouleur)
     {
     case 1:
@@ -52,7 +52,7 @@ int saisieNumCouleur()
     do
     {
         cin >> laCouleur;
-    } while (laCouleur<0 or laCouleur>7);
+    } while (laCouleur<0 || laCouleur>7);
     return laCouleur;
 }
 
@@ -62,7 +62,7 @@ void ex1()
     do
     {
         cin >> laColonne;
-    } while (laColonne < 0 or laColonne > 7);
+    } while (laColonne < 0 || laColonne > 3);
     allumerColonneVert(laColonne);
 
 }
@@ -74,7 +74,7 @@ void ex2()
     do{
         cin >> laColonne;
     } while (laColonne < 0 or laColonne > 7);
-    cin << laCouleur;
+    cin >> laCouleur;
     allumerColonneCouleur(laColonne,laCouleur);
  
 
