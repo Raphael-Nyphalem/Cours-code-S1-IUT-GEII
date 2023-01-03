@@ -15,7 +15,7 @@ FONCTION Entier saisirNumLigne()
         REPETER
             ecrireEcrant("donnez le num de ligne entre 0 et 7")
             ligne <-- lireClavier
-        TQ(ligne>=7 ou ligne<=0)
+        TQ(ligne>7 ou ligne<0)
         RETOURNE(ligne)
     FIN_ACTION
 FIN_FONTION
