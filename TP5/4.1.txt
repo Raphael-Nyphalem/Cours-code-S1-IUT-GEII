@@ -15,7 +15,7 @@ FONCTION VIDE allumerColonneCouleur(Entier: unX1,unY1,unNbPixels,uneCouleur1)
     ACTION
         choixCouleur(uneCouleur1,r,g,b)
         POUR(y <-- unY1)QUAND(y<(unY1+unNbPixels))SUIVANT(y <-- y + 1)
-            enseSetRGBpixel(unX1,y,r, g, b)
+            senseSetRGBpixel(unX1,y,r, g, b)
         FIN_POUR
     FIN_ACTION
 FIN_FONTION
@@ -28,7 +28,7 @@ FONCTION VIDE allumerLigneCouleur(Entier: unX1,unY1,unNbPixels,uneCouleur1)
     ACTION
         choixCouleur(uneCouleur1,r,g,b)
         POUR(x <-- unX1)QUAND(x<(unX1+unNbPixels))SUIVANT(x <-- x + 1)
-            enseSetRGBpixel(x,unY1,r, g, b)
+            senseSetRGBpixel(x,unY1,r, g, b)
         FIN_POUR
     FIN_ACTION
 FIN_FONTION

@@ -1,0 +1,35 @@
+FONCTION VIDE allumeAleaPixel(Entier : numLigne, numColonne)
+    déclaration variables local
+        Entier sur 8bit r,g,b
+    ACTION
+        r <-- rand() % 256
+        g <-- rand() % 256
+        b <-- rand() % 256
+        senseSetRGBpixel(numLigne,numColonne, r, g, b)
+
+
+FONCTION VIDE allumerLigneAlea(entier: numLigne)
+    déclaration de variables local
+        entier x
+    ACTION
+        POUR(x=0)QUAND(x<=7)AVEC(x<--x+1)
+            allumeAleaPixel(x,numLigne)
+        FIN_POUR
+    FIN_ACTION
+FIN_FONTION
+
+FONCTION VIDE allumerMatriceAlea()
+    déclaration variables local
+        entier y
+    ACTION
+        POUR(y=0)QUAND(y<=7)AVEC(y<--y+1)
+            allumerLigneAlea(y)
+        FIN_POUR
+    FIN_ACTION
+FIN_FONTION
+
+PROGRAMME
+    ACTION
+        allumerMatriceAlea()
+    FIN_ACTION
+FIN_PROGRAMME

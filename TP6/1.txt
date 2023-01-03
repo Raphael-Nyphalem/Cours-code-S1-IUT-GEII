@@ -1,0 +1,30 @@
+FONCTION VIDE allumerLigne(entier: numLigne)
+    déclaration de variables local
+        entier x
+    ACTION
+        POUR(x=0)QUAND(x<=7)AVEC(x<--x+1)
+            senseSetRGBpixel(x,numLigne,255,0,0)
+        FIN_POUR
+    FIN_ACTION
+FIN_FONTION
+
+FONCTION Entier saisirNumLigne()
+    déclaration variables local
+        entier ligne
+    ACTION
+        REPETER
+            ecrireEcrant("donnez le num de ligne entre 0 et 7")
+            ligne <-- lireClavier
+        TQ(ligne>=7 ou ligne<=0)
+        RETOURNE(ligne)
+    FIN_ACTION
+FIN_FONTION
+
+PROGRAMME
+    variables local
+        entier ligne
+    ACTION
+        ligne <--saisirNumLigne()
+        allumerLigne(ligne)
+    FIN_ACTION
+FIN_PROGRAMME
