@@ -1,0 +1,16 @@
+NB_MAX =5
+
+PROGRAMME
+	Entier monTableau[NB_MAX]
+	Entier i
+	monTableau = [10,20,30,40,50]
+	
+	POUR i = 0 AVEC i < NB_MAX SUIVANT i = i +1
+		monTableau[i] = monTableau[i] - 5
+	FIN_POUR
+	
+	EcrireEcrant =" Les nouvelles valeurs du tableau sont : " retourAlaLigne
+	POUR i = 0 AVEC i < NB_MAX SUIVANT i = i +1
+		EcrireEcrant "element #" i " : " monTableau[i], retourAlaLigne
+	FIN_POUR
+FIN_PROGRAMME

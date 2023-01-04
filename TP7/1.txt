@@ -1,0 +1,28 @@
+constante entier MAX  = 8
+FONCTION VIDE saisirValeur(entier adress:tabLues[MAX])
+	Entier i,n
+	POUR i = 0 QUAND i<MAX SUIVANT i = i+1
+		n=0
+		REPETER
+			EcrireEcrant ( "donner la valeur " i " entre 0 et 7")
+			n = lireClavier
+		TQ( n<0 ou n>7)
+		tabLues[i] = n
+	FIN_POUR
+FIN_FONCTION
+
+FONCTION VIDE afficheHistogramme( entier tabAff[MAX] )
+	Entier x,y
+	POUR x = 0 QUAND x< MAX SUIVANT x = x+1
+		POUR y = 0 QUAND y <= tabAff[x] SUIVANT (y = y+1)
+		senseSetRGBpixel(x,y,255,0,0)
+		FIN_POUR
+	FIN_POUR
+FIN_FONCTION
+
+PROGRAMME
+	Entier tabVal[MAX]
+	saisirValeur(&tabVal)
+	afficheHistogramme(tabVal)
+FIN_PROGRAMME
+

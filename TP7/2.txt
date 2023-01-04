@@ -1,0 +1,29 @@
+constante entier MAX_NORME_ACCEL = 10
+
+FONCTION entier calculNormeAccel(entier_double xa, entier_double ya, entier_double za)
+	retourne racinecarre(x*x+y*y+z*z)
+FIN_FONCTION
+
+FONCTION double minNormeAccel(entier_double min,entier_double norme)
+	double a
+	SI min < norme
+		a = min
+	SINON 
+		a = norme
+	FIN_SI
+	RETOURNE a
+FIN_FONCTION
+
+PROGRAMME
+	entier_double x,y,z
+	entier_double norme, min
+	entier i 
+	min = MAX_NORME_ACCEL
+	POUR i=0 QUAND i<100 SUIVANT i = i+1
+		senseGetAccelG(&x,&y,&z)
+		norme = calculNormeAccel(x,y,z)
+		min = minNormeAccel(min,norme)
+		
+		sleep_for(millisecond(100))
+	FIN_POUR
+FIN_PROGRAMME
