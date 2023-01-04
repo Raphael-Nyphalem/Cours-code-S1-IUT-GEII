@@ -1,0 +1,22 @@
+y_bits = a * acc_norm + b
+min a 0.1
+max a 1
+8 valeurs
+
+[0,7] = a * [0.1,1] + b
+
+0 = a * 0.1 + b
+7 = a * 1 + b
+
+7 = a * 0.9
+
+a = 7 / 0.9
+b = - 7.9/0.9
+
+y_bits = 7/0.9 * acc_norm - 7.9/0.9
+
+FONCTION Entier conversionLineaire(Entier acc_norm)
+    Entier y_bits
+    y_bits = 7/0.9 * acc_norm - 7.9/0.9
+    RETOURNE y_bits
+FIN_FONCTION
