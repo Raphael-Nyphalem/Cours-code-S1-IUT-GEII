@@ -11,9 +11,9 @@ max a 1
 7 = a * 0.9
 
 a = 7 / 0.9
-b = - 7.9/0.9
+b = - 7/9
 
-y_bits = 7/0.9 * acc_norm - 7.9/0.9
+y_bits = 7/0.9 * acc_norm - 7/9
 
 FONCTION Entier conversionLineaire(Entier acc_norm)
     Entier y_bits

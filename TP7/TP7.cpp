@@ -100,7 +100,7 @@ int conversionLineaire(double acc_norm)
 }
 
 
-const int NB_MESURE;
+const int NB_MESURE = 10;
 
 void ex3()
  {
@@ -137,11 +137,12 @@ void ex3()
             }
             cout << "La norme minimale d'accélération mesurée est : " << normeMin << endl;
 
-            val = conversionLineaire(normeMin)
-            tabVal[i]=val;
         }
-        afficheHistogramme(tabVal);
+        val = conversionLineaire(normeMin);
+        tabVal[e]=val;
+        
     }
+    afficheHistogramme(tabVal);
     
     
  }
