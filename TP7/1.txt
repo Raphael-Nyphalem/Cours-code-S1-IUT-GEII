@@ -1,5 +1,5 @@
 constante entier MAX  = 8
-FONCTION VIDE saisirValeur(entier adress:tabLues[MAX])
+FONCTION VIDE saisirValeur(entier tabLues[MAX])
 	Entier i,n
 	POUR i = 0 QUAND i<MAX SUIVANT i = i+1
 		n=0

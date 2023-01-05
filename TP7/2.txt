@@ -1,6 +1,6 @@
 constante entier MAX_NORME_ACCEL = 10
 
-FONCTION entier calculNormeAccel(entier_double xa, entier_double ya, entier_double za)
+FONCTION entier_double calculNormeAccel(entier_double xa, entier_double ya, entier_double za)
 	retourne racinecarre(x*x+y*y+z*z)
 FIN_FONCTION
 
