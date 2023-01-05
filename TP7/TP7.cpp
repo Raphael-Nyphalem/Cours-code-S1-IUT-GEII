@@ -44,12 +44,12 @@ void ex1()
 
 const int MAX_NORME_ACCEL = 10;
 
-double calculNormeAccel(double xa,double ya, double zb)
+double calculNormeAccel(double xa,double ya, double za)
 {
-    return sqrt(x*x+y*y+z*z)
+    return sqrt(xa*xa+ya*ya+za*za)
 }
 
-double inNormeAccel(double min, double norme)
+double minNormeAccel(double min, double norme)
 {
     double a;
     if (min < norme)
@@ -71,17 +71,41 @@ void ex2()
 
     for (int i = 0; i < 100; i++)
     {
-        //senseGetAccelG(&x,&y,&z);
-        norme = calculNormeAccel(x,y,z);
-		min = minNormeAccel(min,norme);
-        sleep_for(millisecond(100));
+        sleep_for(milliseconds(100));
+        if (senseGetAccelG(x, y, z)) {
+            cout << showpos << fixed << setprecision(6) 
+            << "x = " << x
+            << " y = " << y
+            << " z = " << z;
+            normeAccel = calculNormeAccel(x, y, z);
+            normeMin = minNormeAccel(normeAccel, normeMin);
+            cout << "\t-> norme accélération : " << normeAccel << endl;
+        }
+        else
+        {
+            cout << "Pas de mesure disponible." << endl;
+        }
+        cout << "La norme minimale d'accélération mesurée est : " << normeMin << endl;
     }
     
 }
+
+int conversionLineaire(int acc_norm)
+{
+    int y_bits;
+    y_bits = 7/0.9 * acc_norm - 7.9/0.9;
+    return y_bits;
+}
+
+void ex3()
+ {
+
+ }
 
 
 int main(int argc, char const *argv[])
 {
     ex1();
+    ex2();
     return 0;
 }
