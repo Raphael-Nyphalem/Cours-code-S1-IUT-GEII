@@ -1,0 +1,39 @@
+constance Entier NB_Note = 5
+
+FONCTION VIDE lireNote(reel Tab[NB_Note])
+    entier i,note
+        ACTION
+        POUR i =0 QUAND i < NB_Note SUIVANT i = i + 1
+            REPETE
+                EcrireEcrant "Donnez la note n° ",i+1,"  entre 0 et 20", finLigne()
+                note = lireClavier)
+            TQ(note<0 ou note > 20)
+            Tab[i]=note
+        FIN_POUR
+    FIN_ACTION
+FIN_FONTION
+
+FONCTION VIDE afficherNote(reel Tab[NB_Note],reel moyenne)
+    entier i
+
+    ACTION
+        EcrireEcrant " Les notes sont:", finLigne()
+        POUR i =0 QUAND i < NB_Note SUIVANT i = i + 1
+            EcrireEcrant "\tnote #",i," : ",Tab[i],finLigne()
+        FIN_POUR
+        EcrireEcrant finLigne()
+        EcrireEcrant "La moyenne est : ",moyenne
+    FIN_ACTION
+FIN_FONTION
+
+FONCTION reel calculerMoyenne(reel Tab[NB_Note])
+    entier i
+    réel somme,result
+    somme = 0.0
+    POUR i = 0 QUAND i< NB_Note SUIVANT i = i +1
+        somme = Tab[i] + somme
+    FIN_POUR
+    result = somme / NB_Note
+    RETOURNE result
+FIN_FONTION
+
