@@ -1,0 +1,84 @@
+constante int INIT_MESURES = 0
+constante int MAX_MESURES = 60
+
+constante int MAX_DIR= 
+
+creation_type double tab_cap_t[MAX_DIR]
+
+
+//2
+FONCTION vide cardinal(double angle)
+    
+    entier i
+    double min,max
+
+    string tab[9] = ["N","N.E.","E","S.E","S","S.W.","W","N.W.","N"]
+    
+    POUR i = 0 QUAND i <= 360 SUIVRE i = i + 45
+        min = i -22,5
+        max = i + 22,5
+        SI angle => min et angle <= max ALORS
+            senseShowMessage(tab[i])
+        FIN_SI
+    FIN_POUR
+FIN_FONCTION
+
+//3
+FONCTION vide lireCaps(&tab[MAX_DIR])
+    entier i
+    double a
+
+    POUR i = 0 QUAND i<MAX_DIR SUIVRE i = i +1
+        REPETE
+            a = lireClavier
+        TQ(a<0 ou a>360)
+        tab[i]=a
+    FIN_POUR
+FIN_FONCTION
+
+FONCTION bool mesureCap(double angle,string Cap)
+    entier i
+    double min,max
+    string tab[9] = ["N","N.E.","E","S.E","S","S.W.","W","N.W.","N"]
+
+    POUR i = 0 QUAND i <= 360 SUIVRE i = i + 45
+        SI tab[i]==cap ALORS
+            min = i -22,5
+            max = i + 22,5
+            SI angle => min et angle <= max ALORS
+                retourne VRAI
+            FIN_SI
+        FIN_SI
+    FIN_POUR
+    retourne FAUX
+
+
+
+
+PROGRAMME
+    declaration des variable local
+        //1
+        double mesure[MAX_MESURES]
+        entier i 
+        //3
+    ACTION
+        //1
+        SI (initCompas() )ALORS
+            POUR i = INIT_MESURES QUAND i < MAX_MESURES SUIVRE i = i+1
+                mesure[i]=senseGetCompass()
+                ecrireEcrat(mesure[i])
+                cardinal(mesure[i]) //é
+                sleep_for(milliseconds(500))
+            FIN_POUR
+        FIN_SI
+
+
+        //3
+        tab_cap_t mesCaps
+        lireCaps(mesCaps)
+        
+
+    FIN_ACTION
+FIN_PROGRAMME
+
+            
