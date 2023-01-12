@@ -17,10 +17,10 @@ void cardinal(double angle)
     for (int i = 0; i <=360; i+=45)
     {
         min = i - 22.5;
-        max = i + 22,5;
+        max = i + 22.5;
         if (angle => min && angle <= max)
         {
-            senseShowMessage(TAB_CARDINAL[i]);
+            senseShowMessage(TAB_CARDINAL[i/45]);
         }   
     }
 }
