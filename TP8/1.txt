@@ -64,7 +64,7 @@ PROGRAMME
     ACTION
         //1
         SI (initCompas() )ALORS
-        
+
             senseSetIMUConfig(true, true, false)
 
             POUR i = INIT_MESURES QUAND i < MAX_MESURES SUIVRE i = i+1
@@ -74,7 +74,6 @@ PROGRAMME
                 sleep_for(milliseconds(500))
             FIN_POUR
         FIN_SI
-
 
         //3
         tab_cap_t mesCaps
