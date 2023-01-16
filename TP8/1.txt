@@ -24,7 +24,7 @@ FONCTION vide cardinal(double angle)
 FIN_FONCTION
 
 //3
-FONCTION vide lireCaps(&tab[MAX_DIR])
+FONCTION vide lireCaps(tab[MAX_DIR])
     entier i
     double a
 

@@ -2,7 +2,7 @@
 #include <chrono>
 
 using namespace std;
-const int INIT_MESURES = 0;
+const int INIT_MESURES = 1000;
 const int MAX_MESURES = 60;
 
 const int MAX_DIR= 9;
@@ -38,23 +38,28 @@ void lireCaps(tab_cap_t &tab)
     }
     
 }
-
+void init()
+{
+    double a;
+    for (int i = 0; i < INIT_MESURES; i++)
+    {
+        a= senseGetCompass()
+    }
+    
+}
 
 int main(int argc, char const *argv[])
 {
+    
     double mesure[MAX_MESURES];
-
-    if(initCompas())
-    {
         senseSetIMUConfig(true, true, false);
-        for (int i = INIT_MESURES; i < MAX_MESURES; i++)
+        init();
+        for (int i = 0; i < MAX_MESURES; i++)
         {
             mesure[i]=senseGetCompass();
             cout<<mesure[i];
             //cardinal(mesure[i]);
             sleep_for(milliseconds(500));
         }
-        
-    }
     return 0;
 }
